@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<header class="hero">
+  <div class="hero-label">Ingeniero Mecánico</div>
+  <h1 class="fade-in">Ingeniería térmica, sistemas HVAC y transferencia de calor.</h1>
+  <p class="fade-in">Notas técnicas, proyectos y reflexiones desde la práctica profesional en ingeniería de climatización y sistemas térmicos industriales.</p>
+  <div class="hero-meta fade-in">
+    <div class="hero-meta-item">
+      Especialización
+      <strong>HVAC &amp; Térmica</strong>
+    </div>
+    <div class="hero-meta-item">
+      Docencia
+      <strong>FIUBA — Tecnología del Calor</strong>
+    </div>
+    <div class="hero-meta-item">
+      Industria
+      <strong>Plantas farmacéuticas &amp; hospitalarias</strong>
+    </div>
+  </div>
+</header>
+
+<section id="sobre-mi" class="section">
+  <hr class="section-rule">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <span class="section-title">Sobre mí</span>
+  </div>
+  <div class="about-grid fade-in">
+    <div class="about-text">
+      <p>Ingeniero mecánico especializado en sistemas de climatización (HVAC), transferencia de calor y diseño de instalaciones térmicas para la industria. Mi trabajo combina la práctica profesional en proyectos de alta complejidad con la docencia universitaria.</p>
+      <p>En mi rol como ingeniero HVAC, diseño e implemento sistemas de climatización para plantas farmacéuticas con salas limpias GMP, hospitales y diversas instalaciones industriales. El trabajo demanda un conocimiento profundo de normativas como ASHRAE, ISPE y ANVISA.</p>
+      <p>Como docente en FIUBA, dicto la materia Tecnología del Calor, donde busco formar ingenieros con criterio técnico sólido en el diseño y verificación de calderas, ciclos de cogeneración y sistemas de generación de vapor.</p>
+    </div>
+    <div class="about-aside">
+      <h3>Áreas de expertise</h3>
+      <ul>
+        <li><span>Diseño HVAC</span><span>ASHRAE / SMACNA</span></li>
+        <li><span>Salas limpias</span><span>GMP / ISO 14644</span></li>
+        <li><span>Transferencia de calor</span><span>Intercambiadores</span></li>
+        <li><span>Generación de vapor</span><span>Calderas industriales</span></li>
+        <li><span>Cogeneración</span><span>CHP / Ciclos Rankine</span></li>
+        <li><span>Normativa</span><span>ISPE / ANVISA</span></li>
+        <li><span>Documentación</span><span>P&amp;ID / DTI</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos" class="section">
+  <hr class="section-rule">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <span class="section-title">Proyectos</span>
+  </div>
+  {% assign sorted_projects = site.projects | sort: "order" %}
+  {% for project in sorted_projects %}
+  <div class="project-card fade-in">
+    <a href="{{ project.url | relative_url }}">
+      <div class="project-card-header">
+        <h3>{{ project.title }}</h3>
+        <span class="project-status status-{{ project.status }}">{{ project.status }}</span>
+      </div>
+      <p>{{ project.description }}</p>
+      <div class="project-tags">
+        {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+
+<section id="blog" class="section">
+  <hr class="section-rule">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <span class="section-title">Blog — Notas técnicas</span>
+  </div>
+  {% for post in site.posts %}
+  <article class="blog-entry fade-in">
+    <div class="blog-date">{{ post.date | date: "%Y.%m.%d" }}</div>
+    <div class="blog-content">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Leer más →</a>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section id="docencia" class="section">
+  <hr class="section-rule">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <span class="section-title">Docencia &amp; Publicaciones</span>
+  </div>
+
+  <div class="teaching-item fade-in">
+    <h3>Tecnología del Calor</h3>
+    <div class="institution">FIUBA — Facultad de Ingeniería, UBA</div>
+    <p>Materia de grado de la carrera de Ingeniería Mecánica. Se abordan los principios de generación de vapor, diseño y verificación de calderas humotubulares y acuotubulares, ciclos de potencia (Rankine, cogeneración), tratamiento de agua de alimentación y normativa aplicable.</p>
+  </div>
+
+  <div class="teaching-item fade-in">
+    <h3>Trabajos profesionales dirigidos</h3>
+    <div class="institution">FIUBA — Dirección de tesis</div>
+    <p>Supervisión de trabajos profesionales de fin de carrera en temáticas vinculadas a ingeniería térmica, eficiencia energética y diseño de sistemas HVAC.</p>
+  </div>
+
+  <h3 style="font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); margin: 3rem 0 1.5rem;">Publicaciones seleccionadas</h3>
+
+  <ol class="publications-list fade-in">
+    <li><strong>Análisis de eficiencia energética en sistemas de climatización hospitalaria.</strong> Trabajo presentado en jornadas de ingeniería FIUBA. <em>Aplicación de recuperación de calor en UTA de quirófanos.</em> 2024.</li>
+    <li><strong>Criterios de diseño para cascadas de presión en salas limpias GMP.</strong> Nota técnica interna. <em>Metodología de cálculo y verificación según ISPE Baseline Guide Vol. 2.</em> 2023.</li>
+    <li><strong>Lecciones aprendidas en proyectos HVAC de alta complejidad.</strong> Documento de referencia interno. <em>Sistematización de experiencias en el proyecto CURIE.</em> 2022.</li>
+  </ol>
+</section>

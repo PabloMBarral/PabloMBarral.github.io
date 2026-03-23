@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="post-header">
+  <a href="{{ '/' | relative_url }}#proyectos" class="back-link">← Volver a proyectos</a>
+  <h1>{{ page.title }}</h1>
+  <div class="post-meta">
+    <span class="project-status status-{{ page.status }}">{{ page.status }}</span>
+    {% if page.tags %}<span>{{ page.tags | join: " · " }}</span>{% endif %}
+  </div>
+</div>
+<article class="post-body">
+  {{ content }}
+</article>
