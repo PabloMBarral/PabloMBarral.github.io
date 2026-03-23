@@ -1,8 +1,8 @@
 ---
-title: "Planta Farmacéutica — Proyecto RMB"
+title: "Planta Farmacéutica"
 status: active
-description: "Diseño completo del sistema HVAC para una planta farmacéutica con salas limpias GMP (ISO 7 / ISO 8). Dimensionamiento de UTA con filtración HEPA, cascadas de presión diferencial y documentación de calificación ANVISA."
-tags: [GMP, HEPA H14, ASHRAE 170, Presión diferencial, ANVISA]
+description: "Diseño completo del sistema HVAC para una planta farmacéutica con salas limpias GMP (ISO 7 / ISO 8). Dimensionamiento de UTA con filtración HEPA, cascadas de presión diferencial y documentación de calificación ANMAT."
+tags: [GMP, HEPA H14, ASHRAE 170, Presión diferencial, ANMAT]
 order: 1
 ---
 
