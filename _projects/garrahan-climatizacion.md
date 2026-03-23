@@ -1,5 +1,5 @@
 ---
-title: "Hospital Garrahan — Climatización"
+title: "Hospital — Climatización"
 status: active
 description: "Proyecto de adecuación y ampliación de los sistemas de climatización hospitalaria. Diseño para quirófanos, UTI y áreas de internación con requisitos de ASHRAE 170."
 tags: [Hospitalario, ASHRAE 170, Quirófanos, Redundancia N+1]
@@ -8,7 +8,7 @@ order: 2
 
 ## Alcance del proyecto
 
-Adecuación y ampliación de los sistemas de climatización del Hospital de Pediatría Garrahan. El proyecto abarca quirófanos, unidades de terapia intensiva y áreas de internación con requisitos específicos de calidad de aire interior.
+Adecuación y ampliación de los sistemas de climatización del Hospital. El proyecto abarca quirófanos, unidades de terapia intensiva y áreas de internación con requisitos específicos de calidad de aire interior.
 
 ## Requisitos normativos
 
