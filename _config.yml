@@ -1,0 +1,27 @@
+title: "Pablo — Ingeniería Mecánica & Térmica"
+description: "Notas técnicas, proyectos y reflexiones desde la práctica profesional en ingeniería de climatización y sistemas térmicos industriales."
+url: "https://tu-usuario.github.io"
+baseurl: ""
+
+permalink: /blog/:slug/
+
+collections:
+  projects:
+    output: true
+    permalink: /proyectos/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+markdown: kramdown
+kramdown:
+  math_engine: null
