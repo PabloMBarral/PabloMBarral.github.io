@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-head">
+    <h1>{{ page.title }}</h1>
+    <p class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <p class="post-foot"><a href="{{ '/blog/' | relative_url }}">Volver al blog</a></p>
+</article>

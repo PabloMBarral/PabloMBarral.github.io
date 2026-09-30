@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<section class="intro">
+  <div class="intro-text">
+    <h1>Pablo M. Barral</h1>
+    <p class="lede">Ingeniero mecánico. Diseño sistemas termomecánicos para instalaciones críticas y estoy a cargo de Tecnología del Calor Avanzada en la Facultad de Ingeniería de la UBA.</p>
+  </div>
+  <figure class="intro-fig">
+    {% include hs-diagram.svg %}
+    <figcaption>Diagrama de Mollier del agua: campana de saturación e isobaras de 0,01 a 30&nbsp;MPa, calculadas con CoolProp.</figcaption>
+  </figure>
+</section>
+
+<section class="about prose">
+  <p>Desde 2014 trabajo en ingeniería termomecánica, en los dos extremos de la cadena térmica. Primero del lado de la generación: ciclos de vapor y combinados, cogeneración, combustión de biomasa y modelado de la performance de ciclos y equipos. Desde 2021, en INVAP, del lado de la demanda: climatización, ventilación y producción de frío para instalaciones nucleares, hospitales y plantas farmacéuticas GMP.</p>
+  <p>Enseño en la Facultad de Ingeniería de la UBA desde 2011. Soy profesor adjunto interino de Tecnología del Calor Avanzada (TA216); antes fui docente de Termodinámica I A durante once años. Dirijo Trabajos Profesionales de Ingeniería Mecánica en temas del área térmica.</p>
+  <p>El detalle está en el <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+</section>
+
+<section class="block">
+  <h2>Material abierto</h2>
+  <dl class="works">
+    <dt><a href="https://doi.org/10.5281/zenodo.20092635">Vademecum de Termodinámica</a></dt>
+    <dd>Compendio de definiciones, relaciones y procedimientos de cálculo para la cátedra de Tecnología del Calor Avanzada. Publicado en Zenodo con DOI y licencia abierta.</dd>
+    <dt><a href="https://calculador-estados-agua.streamlit.app/">Calculadora de Estados del Agua</a></dt>
+    <dd>Aplicación web que da el estado termodinámico de un fluido a partir de dos propiedades, en reemplazo de las tablas impresas. <a href="https://github.com/PabloMBarral/apps">Código fuente</a> en Python, con Streamlit y CoolProp.</dd>
+  </dl>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="block">
+  <h2>Últimas notas</h2>
+  <ul class="post-list">
+    {% for post in site.posts limit:3 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="block">
+  <h2>En otros sitios</h2>
+  <dl class="profiles-list">
+    {% for p in site.perfiles %}
+    <dt>{{ p.nombre }}</dt>
+    <dd><a href="{{ p.url }}" rel="me">{{ p.texto }}</a></dd>
+    {% endfor %}
+  </dl>
+</section>

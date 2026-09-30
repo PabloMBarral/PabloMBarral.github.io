@@ -1,0 +1,209 @@
+/* Pablo M. Barral: hoja de estilos del sitio.
+   Paleta de tinta de dibujo técnico sobre papel blanco; un solo acento
+   cálido, reservado para el punto crítico del diagrama. */
+
+:root {
+  --paper: #fcfcfa;
+  --ink: #1c2330;
+  --muted: #5a6472;
+  --rule: #dde1e6;
+  --accent: #1f4e79;
+  --hot: #b03a2e;
+  --iso: #97a1ae;
+  --qual: #c3cad2;
+  --measure: 42rem;
+  --serif: "Literata", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141920;
+    --ink: #e4e7eb;
+    --muted: #9aa4b1;
+    --rule: #2a313b;
+    --accent: #8db8e3;
+    --hot: #e0715f;
+    --iso: #56606d;
+    --qual: #3b434e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #141920;
+  --ink: #e4e7eb;
+  --muted: #9aa4b1;
+  --rule: #2a313b;
+  --accent: #8db8e3;
+  --hot: #e0715f;
+  --iso: #56606d;
+  --qual: #3b434e;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-optical-sizing: auto;
+  font-variant-numeric: lining-nums;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+img, svg { max-width: 100%; }
+
+.skip { position: absolute; left: -999px; top: 0; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: 0.4rem 0.7rem; z-index: 10; }
+
+/* Encabezado y pie */
+.site-head, .page, .site-foot {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-left: max(1.25rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1.25rem, env(safe-area-inset-right, 0px));
+}
+.site-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.4rem; padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-name { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1.05rem; }
+.site-head nav { display: flex; gap: 1.4rem; }
+.site-head nav a { color: var(--muted); text-decoration: none; font-size: 1rem; padding: 0.2rem 0; }
+.site-head nav a:hover { color: var(--ink); }
+.site-head nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
+
+.page { padding-top: 2.5rem; padding-bottom: 3rem; }
+
+.site-foot {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.4rem; padding-bottom: 2.5rem;
+  color: var(--muted); font-size: 0.95rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem 2rem;
+}
+.site-foot p { margin: 0; }
+.profiles { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; }
+
+/* Tipografía común */
+h1, h2 { font-weight: 600; line-height: 1.15; color: var(--ink); }
+h2 { font-size: 1.35rem; margin: 0 0 1rem; }
+.lede { font-size: 1.3rem; line-height: 1.5; color: var(--ink); max-width: 34ch; margin: 0; }
+.meta { color: var(--muted); font-size: 0.95rem; font-variant-numeric: tabular-nums lining-nums; }
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1.1em; }
+.page-title { font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 1.5rem; }
+.empty { color: var(--muted); max-width: var(--measure); }
+.block { margin-top: 3.2rem; max-width: var(--measure); }
+
+/* Inicio: el diagrama es la única pieza protagonista */
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 25rem);
+  gap: 1rem 3rem;
+  align-items: end;
+  margin-bottom: 2.6rem;
+}
+.intro h1 {
+  font-size: clamp(2.7rem, 7.2vw, 4.4rem);
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  margin: 0 0 1.2rem;
+  font-variation-settings: "opsz" 72;
+}
+.intro-fig { margin: 0; }
+.intro-fig figcaption { color: var(--muted); font-size: 0.82rem; line-height: 1.45; margin-top: 0.5rem; max-width: 30ch; }
+
+svg.hs { display: block; width: 100%; height: auto; overflow: hidden; }
+.hs-iso path { stroke: var(--iso); stroke-width: 0.9; }
+.hs-q path { stroke: var(--qual); stroke-width: 0.8; stroke-dasharray: 3 4; }
+.hs-dome { stroke: var(--ink); stroke-width: 1.8; }
+.hs-cp { fill: var(--hot); }
+
+.works { margin: 0; }
+.works dt { font-weight: 600; margin-top: 1.1rem; }
+.works dt:first-child { margin-top: 0; }
+.works dd { margin: 0.2rem 0 0; }
+
+.profiles-list { display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 1.5rem; margin: 0; }
+.profiles-list dt { color: var(--muted); }
+.profiles-list dd { margin: 0; font-variant-numeric: tabular-nums lining-nums; }
+
+.post-list { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.post-list li { display: grid; grid-template-columns: 7.2rem 1fr; gap: 0.2rem 1.2rem; padding: 0.5rem 0; }
+.post-list time { color: var(--muted); font-variant-numeric: tabular-nums lining-nums; }
+.post-list p { grid-column: 2; margin: 0; color: var(--muted); font-size: 1rem; }
+
+/* CV */
+.cv-head { margin-bottom: 1rem; }
+.cv-head h1 { font-size: clamp(2.2rem, 5.5vw, 3.2rem); letter-spacing: -0.01em; margin: 0 0 0.9rem; }
+.cv-contact { margin: 1.2rem 0 0; }
+.cv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; margin: 1.2rem 0 0; }
+button.print {
+  font: inherit; font-size: 0.95rem; color: var(--ink);
+  background: transparent; border: 1px solid var(--ink); border-radius: 4px;
+  padding: 0.35rem 0.8rem; cursor: pointer;
+}
+button.print:hover { background: var(--ink); color: var(--paper); }
+
+.cv-section { margin-top: 2.8rem; }
+.cv-section h2 { padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule); max-width: 48rem; }
+.cv-items { list-style: none; margin: 0; padding: 0; max-width: 48rem; }
+.cv-item { display: grid; grid-template-columns: 7.2rem minmax(0, 1fr); gap: 0 1.2rem; padding: 0.55rem 0; }
+.cv-when { color: var(--muted); font-size: 0.98rem; font-variant-numeric: tabular-nums lining-nums; padding-top: 0.05rem; }
+.cv-body p, .cv-detail p { margin: 0; }
+.cv-what { font-weight: 600; line-height: 1.4; }
+.cv-where { color: var(--muted); line-height: 1.45; }
+.cv-detail { margin-top: 0.25rem; line-height: 1.55; max-width: 38rem; }
+
+/* Notas */
+.post-head h1 { font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -0.01em; margin: 0 0 0.6rem; max-width: 22ch; }
+.post-head .meta { margin: 0 0 2rem; }
+.prose h2 { margin-top: 2.2rem; }
+.prose h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+.prose blockquote { margin: 1.4rem 0; padding-left: 1.1rem; border-left: 2px solid var(--rule); color: var(--muted); }
+.prose code { font-size: 0.9em; }
+.prose pre { overflow-x: auto; padding: 0.9rem 1rem; border: 1px solid var(--rule); border-radius: 4px; font-size: 0.85rem; line-height: 1.5; }
+.prose table { display: block; overflow-x: auto; border-collapse: collapse; }
+.prose th, .prose td { border-bottom: 1px solid var(--rule); padding: 0.35rem 0.8rem 0.35rem 0; text-align: left; }
+.prose .katex-display { overflow-x: auto; overflow-y: hidden; }
+.post-foot { margin-top: 3rem; }
+
+@media (max-width: 46rem) {
+  .intro { grid-template-columns: 1fr; }
+  .intro-fig { max-width: 24rem; }
+}
+@media (max-width: 34rem) {
+  body { font-size: 1.0625rem; }
+  .cv-item, .post-list li { grid-template-columns: 1fr; }
+  .cv-when { font-size: 0.92rem; }
+  .post-list p { grid-column: 1; }
+  .profiles-list { grid-template-columns: 1fr; gap: 0 0; }
+  .profiles-list dd { margin-bottom: 0.5rem; }
+}
+
+@media print {
+  :root { --paper: #fff; --ink: #000; --muted: #333; --rule: #bbb; --accent: #000; }
+  body { font-size: 10pt; line-height: 1.4; }
+  .site-head, .site-foot, .skip, .cv-actions { display: none; }
+  .page { padding: 0; max-width: none; }
+  a { color: inherit; text-decoration: none; }
+  .cv-head h1 { font-size: 20pt; }
+  .cv-section { margin-top: 1.2rem; break-inside: auto; }
+  .cv-section h2 { font-size: 12pt; break-after: avoid; }
+  .cv-item { break-inside: avoid; padding: 0.25rem 0; grid-template-columns: 6.5rem 1fr; }
+  @page { margin: 16mm 18mm; }
+}

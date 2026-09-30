@@ -1,0 +1,68 @@
+title: Pablo M. Barral
+tagline: Ingeniería termomecánica y docencia universitaria
+description: >-
+  Ingeniero mecánico (FIUBA). Ingeniería termomecánica de instalaciones críticas
+  y docencia en Tecnología del Calor Avanzada, Facultad de Ingeniería, UBA.
+lang: es
+url: https://pablombarral.github.io
+baseurl: ""
+timezone: America/Argentina/Buenos_Aires
+
+author:
+  name: Pablo M. Barral
+  email: pbarral@fi.uba.ar
+
+# Identidad: jekyll-seo-tag publica estos enlaces como "sameAs" (JSON-LD),
+# para que los buscadores unan el sitio con los perfiles.
+social:
+  name: Pablo M. Barral
+  links:
+    - https://orcid.org/0000-0003-1125-4199
+    - https://scholar.google.com/citations?user=nxvRCoUAAAAJ
+    - https://github.com/PabloMBarral
+    - https://www.linkedin.com/in/pablo-barral/
+
+# Perfiles que se muestran en el inicio, el CV y el pie.
+perfiles:
+  - nombre: ORCID
+    url: https://orcid.org/0000-0003-1125-4199
+    texto: 0000-0003-1125-4199
+  - nombre: Google Scholar
+    url: https://scholar.google.com/citations?user=nxvRCoUAAAAJ
+    texto: nxvRCoUAAAAJ
+  - nombre: GitHub
+    url: https://github.com/PabloMBarral
+    texto: PabloMBarral
+  - nombre: LinkedIn
+    url: https://www.linkedin.com/in/pablo-barral/
+    texto: pablo-barral
+
+permalink: /blog/:year/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax   # $$...$$ en las notas; KaTeX lo dibuja si la nota tiene math: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

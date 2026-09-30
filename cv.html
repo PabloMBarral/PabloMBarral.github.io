@@ -1,0 +1,22 @@
+---
+layout: default
+title: CV
+permalink: /cv/
+description: Currículum de Pablo M. Barral, ingeniero mecánico y docente de la Facultad de Ingeniería de la UBA.
+---
+<header class="cv-head">
+  <h1>Pablo M. Barral</h1>
+  <p class="lede">Ingeniero mecánico. Ingeniería termomecánica de instalaciones críticas y docencia universitaria en el área térmica.</p>
+  <p class="cv-contact">
+    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br>
+    ORCID <a href="https://orcid.org/0000-0003-1125-4199">0000-0003-1125-4199</a>
+  </p>
+  <p class="cv-actions">
+    <button type="button" class="print" onclick="window.print()">Imprimir o guardar en PDF</button>
+    <span class="meta">Actualizado el {{ site.data.cv.actualizado | date: "%Y-%m-%d" }}</span>
+  </p>
+</header>
+
+{% for sec in site.data.cv.secciones %}
+  {% include cv-section.html sec=sec %}
+{% endfor %}

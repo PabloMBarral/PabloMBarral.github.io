@@ -1,0 +1,238 @@
+# CV -- fuente única de la página /cv/.
+# Todo lo que figura acá tiene que coincidir con el legajo del concurso (DDJJ).
+# Reglas aplicadas en esta versión (2026-09-23):
+#   - Fechas de empleo solo con año (evita el 2016-03 / 2016-10 de Agrest
+#     hasta que la errata esté presentada en la ampliación).
+#   - Sin nombres de proyectos ni de clientes de INVAP o de Agrest.
+#   - Sin contadores de Trabajos Profesionales ni de jurados (se están
+#     recalculando para la ampliación).
+#   - JIMec no figura: asistencia como director, no disertación propia.
+#   - Mollier queda afuera.
+# Campos de cada ítem: cuando, que, donde, detalle (este último admite Markdown).
+
+actualizado: 2026-09-23
+
+secciones:
+
+  - id: formacion
+    titulo: Formación
+    items:
+      - cuando: "2019"
+        que: Ingeniero Mecánico
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: Diploma de Honor. Promedio general 8,06.
+      - cuando: "2017"
+        que: "Trabajo Profesional: *Diagnóstico Termoeconómico de Plantas de Generación*"
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: En coautoría con Gerardo Rinaldi y Ariel Sapollnik. Tutora académica, Mg. Inga. Adela R. Hutin.
+      - cuando: "2015"
+        que: Análisis Termoeconómico de Plantas de Generación
+        donde: Fundación CIRCE, Universidad de Zaragoza (España)
+        detalle: >-
+          Capacitación presencial de 100 horas certificadas, dentro del programa
+          de transferencia tecnológica y análisis termoeconómico de plantas de
+          generación con la Fundación CIRCE y CAMMESA (FIUBA, 2015–2016).
+
+  - id: experiencia
+    titulo: Experiencia profesional
+    items:
+      - cuando: 2021–hoy
+        que: Ingeniero termomecánico
+        donde: INVAP S.A.U., Unidad Funcional de Ingeniería Termomecánica
+        detalle: >-
+          Climatización, ventilación y plantas de agua fría y caliente para
+          instalaciones críticas: facilidades nucleares, hospitales y centros de
+          medicina nuclear, plantas farmacéuticas GMP y data centers. Ingeniería
+          conceptual, básica y de detalle; nivelación técnica y compra de equipos;
+          representación técnica en contratos de montaje y dirección de
+          contratistas en obra. Responsable de paquetes de trabajo.
+      - cuando: 2016–2021
+        que: Ingeniería de generación y procesos térmicos
+        donde: Ingeniería Agrest S.R.L.
+        detalle: >-
+          Modelado de ciclos de vapor, combinados y de cogeneración y de la
+          performance de sus equipos. Cálculo y especificación de calderas
+          convencionales, de recuperación y de biomasa, y de turbinas de gas y de
+          vapor. Estudios de factibilidad y de eficiencia energética para la
+          industria de proceso. Análisis tensional de cañerías (ASME B31.1).
+          Introduje el uso sistemático de EES en los equipos de trabajo.
+      - cuando: 2014–2015
+        que: Proyectista mecánico
+        donde: RED Estudios y Proyectos Hidráulicos S.A.
+        detalle: >-
+          Estaciones de bombeo para acueductos: selección y especificación de
+          bombas, layouts y modelado 3D del piping.
+
+  - id: docencia
+    titulo: Docencia universitaria
+    items:
+      - cuando: 2018–hoy
+        que: Tecnología del Calor Avanzada (TA216) y Tecnología del Calor (67.33)
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: >-
+          Profesor adjunto interino desde 2024; antes jefe de trabajos prácticos
+          (2023), ayudante primero (2020) y ayudante segundo ad honórem (2018).
+          A cargo integral de la asignatura desde 2022.
+      - cuando: 2011–2022
+        que: Termodinámica I A (67.04)
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: >-
+          Ayudante; a cargo de la parte práctica desde 2014. Introduje el uso de
+          EES como herramienta de cálculo termodinámico en la asignatura.
+      - cuando: "2023"
+        que: Energética en las Instalaciones Eléctricas y Térmicas
+        donde: Especialización en Energías Renovables, Eficiencia Energética y Cambio Climático, CEARE, Universidad de Buenos Aires
+        detalle: Docente invitado de posgrado. Bloque de eficiencia energética en instalaciones térmicas.
+      - cuando: 2022–2023
+        que: Tecnología del Calor
+        donde: Facultad Regional Buenos Aires, Universidad Tecnológica Nacional
+        detalle: Ayudante primero.
+      - cuando: "2018"
+        que: Técnicas de Diagnóstico de Ciclos Térmicos Complejos
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: >-
+          Curso de posgrado, junto con el Dr. Alejandro Zaleta-Aguilar
+          (Universidad de Guanajuato) y el Ing. Eduardo León.
+      - cuando: 2016–2020
+        que: Probabilidad y Estadística (67.09 / 81.04)
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: Ayudante segundo.
+
+  - id: formacion-rrhh
+    titulo: Formación de recursos humanos
+    items:
+      - cuando: 2019–hoy
+        que: Dirección de Trabajos Profesionales de Ingeniería Mecánica
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: >-
+          En temas del área térmica. Jurado de Trabajos Profesionales de grado y
+          de una tesis de grado de Ingeniería Química.
+
+  - id: publicaciones
+    titulo: Publicaciones y material abierto
+    items:
+      - cuando: "2026"
+        que: Vademecum de Termodinámica
+        donde: Zenodo
+        detalle: >-
+          Material didáctico original para la cátedra de Tecnología del Calor
+          Avanzada. Licencia CC BY-SA 4.0.
+          DOI: [10.5281/zenodo.20092635](https://doi.org/10.5281/zenodo.20092635)
+      - cuando: 2024–hoy
+        que: Calculadora de Estados del Agua
+        donde: Aplicación web de código abierto (Python, Streamlit, CoolProp)
+        detalle: >-
+          Estado termodinámico de un fluido a partir de dos propiedades, en
+          reemplazo de las tablas impresas.
+          Disponible [en línea](https://calculador-estados-agua.streamlit.app/),
+          con el [código fuente](https://github.com/PabloMBarral/apps) en GitHub.
+      - cuando: "2018"
+        que: >-
+          On Energy Reconciliation Diagnose and Their Malfunction: A Proposal of
+          Routes Corrections, Case of Study: Geothermal Power Cycle
+        donde: Journal of Fundamentals of Renewable Energy and Applications, 8(5), 1–6
+        detalle: >-
+          Zaleta-Aguilar, A.; Ramírez-Olais, A.; Barral, P.; León, E.
+          DOI: [10.4172/2090-4541.1000272](https://doi.org/10.4172/2090-4541.1000272)
+
+  - id: disertaciones
+    titulo: Disertaciones
+    items:
+      - cuando: "2021"
+        que: Cogeneración – Conceptos Exergéticos y Potenciales Beneficios
+        donde: VIIIª Jornada sobre Optimización Energética en la Industria de Grasas y Aceites, ASAGA
+      - cuando: "2020"
+        que: Análisis Exergético en Ciclos Industriales y Cogeneración
+        donde: VIIª Jornada sobre Optimización Energética en la Industria de Grasas y Aceites, ASAGA
+      - cuando: "2019"
+        que: Gestión Energética
+        donde: Jornada por los 90 años del IGPUBA, Facultad de Ingeniería, UBA
+        detalle: Expositor en la mesa temática «Energía, Materiales y Fluidos».
+      - cuando: "2016"
+        que: Estudio Termoeconómico de un Ciclo de Potencia y el Cambio Climático
+        donde: 3er Congreso de Ingeniería para el Cambio Climático, COPIME
+
+  - id: cursos
+    titulo: Cursos de especialización
+    items:
+      - cuando: "2026"
+        que: HVAC for Pharma Facilities
+        donde: ISPE
+        detalle: 2,0 CEU.
+      - cuando: "2026"
+        que: Código ASME B31.3
+        donde: ASME
+        detalle: 23 PDH.
+      - cuando: "2024"
+        que: Calderas y equipos a presión
+        donde: ASME
+        detalle: >-
+          *ASME/API Boilers and Fired Pressure Equipment Operation and
+          Maintenance* (23 PDH) y *Boilers and Fired Pressure Equipment
+          Inspection, Repairs, and Alterations* (15 PDH).
+      - cuando: "2024"
+        que: Ash-Related Operational Challenges in Energy Utilization of Sustainable Fuels
+        donde: Technical University of Denmark (DTU)
+        detalle: 70 horas.
+      - cuando: "2024"
+        que: Precommissioning, Commissioning & Startup, nivel avanzado
+        donde: Proactiva Capacitaciones
+        detalle: 64 horas.
+      - cuando: "2024"
+        que: Mantenimiento de Turbinas de Gas
+        donde: Escuela en Gestión, Energía y Petróleo (ESGEP)
+        detalle: 30 horas.
+      - cuando: "2024"
+        que: EnergyPlus for Practitioners
+        donde: Big Ladder Software
+        detalle: 16 horas.
+      - cuando: "2019"
+        que: Código ASME B31.1, cañerías de vapor y sistemas de potencia
+        donde: ASME
+        detalle: 23 PDH.
+      - cuando: "2017"
+        que: Curso en Temática de Género para Docentes
+        donde: Secretaría de Asuntos Académicos, Universidad de Buenos Aires
+        detalle: 120 horas.
+
+  - id: cogobierno
+    titulo: Cogobierno universitario
+    items:
+      - cuando: 2014–2018
+        que: Consejero estudiantil titular, Consejo Directivo
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+        detalle: Dos períodos consecutivos, por elección directa.
+      - cuando: 2014–2018
+        que: Representante estudiantil, Comisión Curricular Permanente de Ingeniería Mecánica
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+      - cuando: 2013–2018
+        que: Representante estudiantil, Consejo Asesor del Departamento de Ingeniería Mecánica
+        donde: Facultad de Ingeniería, Universidad de Buenos Aires
+      - cuando: "2013"
+        que: Integrante de la Asamblea Universitaria
+        donde: Universidad de Buenos Aires
+
+  - id: idiomas
+    titulo: Idiomas
+    items:
+      - cuando: Castellano
+        que: Lengua materna
+      - cuando: Inglés
+        que: Nivel C1
+        detalle: >-
+          IELTS Indicator (Academic), 7.5/9, 2020. Password Skills, Cranfield
+          University, 7.0 o superior, 2020.
+
+  - id: herramientas
+    titulo: Herramientas
+    items:
+      - cuando: Simulación
+        que: EES, TESPy, Modelica (Buildings, ThermoPower)
+      - cuando: Edificios
+        que: EnergyPlus, HAP, CONTAM
+      - cuando: Programación
+        que: Python (CoolProp, thermo, ht, fluids, NumPy, SciPy, pandas, Streamlit), MATLAB
+      - cuando: CAD
+        que: SolidWorks, AutoCAD, Revit
+      - cuando: Publicación
+        que: Git, GitHub, Zenodo, LaTeX

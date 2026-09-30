@@ -1,0 +1,15 @@
+<section class="cv-section" id="{{ include.sec.id }}" aria-labelledby="h-{{ include.sec.id }}">
+  <h2 id="h-{{ include.sec.id }}">{{ include.sec.titulo }}</h2>
+  <ul class="cv-items">
+    {% for e in include.sec.items %}
+    <li class="cv-item">
+      <span class="cv-when">{{ e.cuando }}</span>
+      <div class="cv-body">
+        <p class="cv-what">{{ e.que | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+        {% if e.donde %}<p class="cv-where">{{ e.donde }}</p>{% endif %}
+        {% if e.detalle %}<div class="cv-detail">{{ e.detalle | markdownify }}</div>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

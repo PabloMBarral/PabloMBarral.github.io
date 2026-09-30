@@ -1,0 +1,6 @@
+<footer class="site-foot">
+  <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+  <ul class="profiles">
+    {% for p in site.perfiles %}<li><a href="{{ p.url }}" rel="me">{{ p.nombre }}</a></li>{% endfor %}
+  </ul>
+</footer>

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: Notas y opinión de Pablo M. Barral sobre ingeniería térmica y enseñanza de la ingeniería.
+---
+<h1 class="page-title">Blog</h1>
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">Todavía no hay notas publicadas. Mientras tanto, está el <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+{% endif %}
