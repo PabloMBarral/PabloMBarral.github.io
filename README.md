@@ -21,29 +21,6 @@ configuración adicional.
 
 Los borradores que queden en `_drafts/` no se publican.
 
-## Primera publicación (reemplaza el sitio anterior)
-
-El repositorio actual tiene en su historial nombres de proyectos que se
-sacaron del contenido. Borrarlo y crearlo de nuevo deja el historial limpio
-y conserva la misma dirección.
-
-1. GitHub → `PabloMBarral.github.io` → Settings → General → Danger Zone →
-   Delete this repository.
-2. Crear un repositorio nuevo, público, con el mismo nombre
-   `PabloMBarral.github.io`, sin README ni licencia.
-3. Desde esta carpeta:
-
-   ```bash
-   git init -b main
-   git add .
-   git commit -m "Sitio personal: CV y blog"
-   git remote add origin https://github.com/PabloMBarral/PabloMBarral.github.io.git
-   git push -u origin main
-   ```
-
-4. Settings → Pages → Source: *Deploy from a branch*, rama `main`, carpeta
-   `/ (root)`. El sitio queda en <https://pablombarral.github.io>.
-
 ## Vista local (opcional)
 
 Requiere Ruby. `bundle install` una vez y después `bundle exec jekyll serve`;

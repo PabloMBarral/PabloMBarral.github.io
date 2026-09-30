@@ -194,6 +194,10 @@ secciones:
         que: Curso en Temática de Género para Docentes
         donde: Secretaría de Asuntos Académicos, Universidad de Buenos Aires
         detalle: 120 horas.
+      - cuando: "2016"
+        que: IV Taller de Matemática Aplicada a la Industria (TAMI)
+        donde: Facultad de Ciencias Exactas y Naturales, UBA
+        detalle: 40 horas.
 
   - id: cogobierno
     titulo: Cogobierno universitario
