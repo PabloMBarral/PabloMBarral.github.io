@@ -10,7 +10,7 @@
 #   - Mollier queda afuera.
 # Campos de cada ítem: cuando, que, donde, detalle (este último admite Markdown).
 
-actualizado: 2026-09-23
+actualizado: 2026-09-29
 
 secciones:
 
@@ -80,7 +80,7 @@ secciones:
           Ayudante; a cargo de la parte práctica desde 2014. Introduje el uso de
           EES como herramienta de cálculo termodinámico en la asignatura.
       - cuando: "2023"
-        que: Energética en las Instalaciones Eléctricas y Térmicas
+        que: Eficiencia Energética en las Instalaciones Eléctricas y Térmicas
         donde: Especialización en Energías Renovables, Eficiencia Energética y Cambio Climático, CEARE, Universidad de Buenos Aires
         detalle: Docente invitado de posgrado. Bloque de eficiencia energética en instalaciones térmicas.
       - cuando: 2022–2023
@@ -156,9 +156,9 @@ secciones:
     titulo: Cursos de especialización
     items:
       - cuando: "2026"
-        que: HVAC for Pharma Facilities
+        que: HVAC & Environmental Control for Life Science Facilities (T14)
         donde: ISPE
-        detalle: 2,0 CEU.
+        detalle: 24 horas (2,0 CEU).
       - cuando: "2026"
         que: Código ASME B31.3
         donde: ASME
