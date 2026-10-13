@@ -138,6 +138,10 @@ svg.hs { display: block; width: 100%; height: auto; overflow: hidden; }
 .works dt:first-child { margin-top: 0; }
 .works dd { margin: 0.2rem 0 0; }
 
+.now-list { margin: 0; padding-left: 1.2rem; }
+.now-list li { margin: 0.3rem 0; }
+.now-list li::marker { color: var(--muted); }
+
 .profiles-list { display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 1.5rem; margin: 0; }
 .profiles-list dt { color: var(--muted); }
 .profiles-list dd { margin: 0; font-variant-numeric: tabular-nums lining-nums; }

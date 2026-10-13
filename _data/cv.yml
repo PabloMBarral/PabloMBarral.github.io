@@ -8,9 +8,11 @@
 #     recalculando para la ampliación).
 #   - JIMec no figura: asistencia como director, no disertación propia.
 #   - Mollier queda afuera.
+#   - Excepción (2026-10-13): IAEA Safety Standards Overview figura acá pero no
+#     en el legajo; quedó afuera de la ampliación por decisión del 2026-10-08.
 # Campos de cada ítem: cuando, que, donde, detalle (este último admite Markdown).
 
-actualizado: 2026-09-29
+actualizado: 2026-10-13
 
 secciones:
 
@@ -155,6 +157,10 @@ secciones:
   - id: cursos
     titulo: Cursos de especialización
     items:
+      - cuando: "2026"
+        que: IAEA Safety Standards Overview
+        donde: Organismo Internacional de Energía Atómica (IAEA)
+        detalle: Curso a distancia (e-learning).
       - cuando: "2026"
         que: HVAC & Environmental Control for Life Science Facilities (T14)
         donde: ISPE
